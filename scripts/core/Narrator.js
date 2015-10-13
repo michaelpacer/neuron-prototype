@@ -143,17 +143,19 @@ window.Narrator = new (function(){
 					var p = new promise.Promise();
 
 					var marker = self.voice.markers[markerID];
-					var soundInstance = createjs.Sound.play(self.voice.file,{
-						startTime: marker[0],
-						duration: marker[1]-marker[0]
-					});
-					self.soundInstances.push(soundInstance);
+					// var soundInstance = createjs.Sound.play(self.voice.file,{
+					// 	startTime: marker[0],
+					// 	duration: marker[1]-marker[0]
+					// });
+					// self.soundInstances.push(soundInstance);
 
-					soundInstance.on("complete", function(){
-						var index = self.soundInstances.indexOf(soundInstance);
-						if(index>=0) self.soundInstances.splice(index,1);
-						p.done();
-					});
+					// soundInstance.on("complete", function(){
+					// 	var index = self.soundInstances.indexOf(soundInstance);
+					// 	if(index>=0) self.soundInstances.splice(index,1);
+					// 	p.done();
+					// });
+                    //mpacer needed to ensure the promise is completed
+                    p.done();
 
 					return p;
 
