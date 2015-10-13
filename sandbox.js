@@ -20,7 +20,7 @@ Preload({
 
 	],
 	sounds:[
-		{id:"voice_intro", src:"assets/voices/intro.mp3"},
+		{id:"voice_intro", src:"assets/voices/loop.mp3"},
 		{id:"sfx_spark", src:"assets/sfx/spark.mp3"},
 		{id:"sfx_loop", src:"assets/sfx/loop.mp3"}
 	]
